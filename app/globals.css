@@ -1,0 +1,405 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Bold Glam Studio — design tokens (DESIGN.md §8)
+   ========================================================================= */
+@theme {
+  --color-noir: #0b0b0d;
+  --color-onyx: #141417;
+  --color-onyx-2: #1c1c21;
+  --color-smoke: #2a2a31;
+  --color-ivory: #f7f3ec;
+  --color-muted: #a19b90;
+  --color-muted-2: #6e6a63;
+  --color-gold: #e5b94e;
+  --color-gold-hi: #f6e1a3;
+  --color-gold-lo: #b8862f;
+  --color-gold-ink: #3a2c0c;
+  --color-fuchsia: #ff2e88;
+  --color-fuchsia-soft: #ff6fae;
+  --color-success: #3fd08a;
+  --color-warning: #ffb020;
+  --color-danger: #ff5a5a;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-script: var(--font-ephesis), cursive;
+
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 20px 50px -30px rgba(0, 0, 0, 0.9);
+  --shadow-gold: 0 10px 40px -12px rgba(229, 185, 78, 0.35);
+  --shadow-fuchsia: 0 10px 40px -12px rgba(255, 46, 136, 0.45);
+
+  --ease-glam: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Non-color design constants (not part of @theme's utility generation) */
+:root {
+  --grad-gold: linear-gradient(
+    135deg,
+    var(--color-gold-hi) 0%,
+    var(--color-gold) 38%,
+    var(--color-gold-lo) 78%,
+    var(--color-gold-hi) 100%
+  );
+  --glow-gold: radial-gradient(
+    60% 60% at 50% 0%,
+    rgba(229, 185, 78, 0.22) 0%,
+    rgba(229, 185, 78, 0) 70%
+  );
+  --glow-fuchsia: radial-gradient(
+    50% 50% at 80% 20%,
+    rgba(255, 46, 136, 0.16) 0%,
+    rgba(255, 46, 136, 0) 70%
+  );
+  --overlay: rgba(7, 7, 9, 0.72);
+  --border-gold: 1px solid rgba(229, 185, 78, 0.35);
+}
+
+/* =========================================================================
+   Base
+   ========================================================================= */
+* {
+  border-color: var(--color-smoke);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 88px; /* clear the sticky nav on anchor jumps */
+}
+
+body {
+  background-color: var(--color-noir);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background: rgba(255, 46, 136, 0.28);
+  color: var(--color-ivory);
+}
+
+/* Visible focus ring (fuchsia) — DESIGN.md §4 / §7 */
+:focus-visible {
+  outline: 2px solid var(--color-fuchsia);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  color: var(--color-ivory);
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================================
+   Type ramp (DESIGN.md §2) — fluid clamp scale
+   ========================================================================= */
+.text-display-xl {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.75rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+.text-display-l {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+.text-display-m {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.text-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.05;
+}
+.text-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.4vw, 2.15rem);
+  line-height: 1.1;
+}
+.text-h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.text-body-l {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+.text-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+/* =========================================================================
+   Signature surfaces & gold treatments
+   ========================================================================= */
+
+/* Metallic gold text (headlines/wordmark). Kept ≥18px/semibold per AA rule. */
+.text-gold-metal {
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-grad-gold {
+  background: var(--grad-gold);
+}
+
+/* Signature hairline gold rule (DESIGN.md §3) */
+.rule-gold {
+  height: 1px;
+  border: 0;
+  background: var(--grad-gold);
+  opacity: 0.35;
+}
+
+/* Card top-edge gold hairline */
+.hairline-top {
+  position: relative;
+}
+.hairline-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--grad-gold);
+  opacity: 0.35;
+  transition: opacity 0.3s var(--ease-glam);
+  pointer-events: none;
+}
+.hairline-top:hover::before {
+  opacity: 0.7;
+}
+
+/* Gold-dust radial washes */
+.wash-gold {
+  background: var(--glow-gold);
+}
+.wash-fuchsia {
+  background: var(--glow-fuchsia);
+}
+
+/* Layout container */
+.container-glam {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 768px) {
+  .container-glam {
+    padding-inline: 32px;
+  }
+}
+
+/* Section rhythm */
+.section-y {
+  padding-block: 96px;
+}
+@media (min-width: 768px) {
+  .section-y {
+    padding-block: 128px;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--grad-gold);
+  color: var(--color-gold-ink);
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: top 0.2s var(--ease-glam);
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* CONFIRM token — always visibly flagged, never mistaken for real copy */
+.confirm-token {
+  display: inline;
+  color: var(--color-fuchsia);
+  background: rgba(255, 46, 136, 0.1);
+  border: 1px solid rgba(255, 46, 136, 0.4);
+  border-radius: 6px;
+  padding: 0 6px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9em;
+  white-space: normal;
+}
+
+/* Card surface (DESIGN.md §4): onyx, hairline border, low warm shadow, lift on hover */
+.card-surface {
+  background: var(--color-onyx);
+  border: 1px solid var(--color-smoke);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s var(--ease-glam), background-color 0.3s var(--ease-glam),
+    border-color 0.3s var(--ease-glam);
+}
+.card-surface:hover {
+  background: var(--color-onyx-2);
+  transform: translateY(-4px);
+}
+
+/* Spotlight card: card surface + cursor-follow gold sheen (desktop pointer only) */
+.spotlight-card {
+  position: relative;
+  background: var(--color-onyx);
+  border: 1px solid var(--color-smoke);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease-glam), background-color 0.3s var(--ease-glam),
+    border-color 0.3s var(--ease-glam);
+}
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(229, 185, 78, 0.14),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-glam);
+  pointer-events: none;
+}
+@media (pointer: fine) {
+  .spotlight-card:hover {
+    background: var(--color-onyx-2);
+    transform: translateY(-4px);
+    border-color: rgba(229, 185, 78, 0.3);
+  }
+  .spotlight-card:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Primary CTA — gold gradient fill with a fuchsia inner ring that fades in on hover */
+.btn-primary {
+  position: relative;
+  background: var(--grad-gold);
+  isolation: isolate;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--color-fuchsia);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-glam);
+  pointer-events: none;
+}
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================================
+   Motion utilities (all reduced-motion aware)
+   ========================================================================= */
+@keyframes shine-sweep {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    110deg,
+    var(--color-gold) 20%,
+    var(--color-gold-hi) 40%,
+    #fff8e6 50%,
+    var(--color-gold-hi) 60%,
+    var(--color-gold) 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shine-sweep 3s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-scroll 38s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text {
+    animation: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
