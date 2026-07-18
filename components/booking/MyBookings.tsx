@@ -44,7 +44,9 @@ export function MyBookings() {
           placeholder="Phone or email"
           aria-label="Phone or email"
           className={cn(
-            "h-12 flex-1 rounded-[var(--radius-sm)] border border-[var(--color-smoke)] bg-[var(--color-noir)] px-3.5 text-[var(--color-ivory)] placeholder:text-[var(--color-muted-2)]",
+            // w-full (not flex-1) on mobile so the column-flex parent doesn't
+            // collapse the input height; flex-1 only once the row is horizontal.
+            "h-12 w-full rounded-[var(--radius-sm)] border border-[var(--color-smoke)] bg-[var(--color-noir)] px-3.5 text-[var(--color-ivory)] placeholder:text-[var(--color-muted-2)] sm:flex-1",
             "focus:outline-none focus:border-[var(--color-gold)] focus:ring-4 focus:ring-[rgba(255,46,136,0.3)]"
           )}
         />

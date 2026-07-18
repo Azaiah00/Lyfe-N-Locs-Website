@@ -8,8 +8,8 @@ import { business } from "@/data/facts";
 
 /**
  * Hero — "magazine cover meets neon salon window" (DESIGN.md §0).
- * Gold-dust drift behind, Split/Blur reveal on the headline, ShinyText on the
- * word "expensive", one primary CTA + one secondary. Hero image is priority/LCP.
+ * Gold-dust drift behind, Split/Blur reveal on the headline, ShinyText on
+ * "head-turning results.", one primary CTA + one secondary. Hero image is priority/LCP.
  */
 export function Hero() {
   return (
@@ -23,8 +23,8 @@ export function Hero() {
           <Eyebrow>Arlington, TX · Loc &amp; Braid Studio</Eyebrow>
 
           <h1 id="hero-heading" className="mt-5 text-display-xl">
-            <SplitText as="p" text="Locs that look" className="text-[var(--color-ivory)]" />
-            <ShinyText className="text-display-xl">expensive.</ShinyText>
+            <SplitText as="p" text="Healthy locs," className="text-[var(--color-ivory)]" />
+            <ShinyText className="text-display-xl">head-turning results.</ShinyText>
           </h1>
 
           <p className="mt-6 max-w-xl text-body-l text-[var(--color-muted)]">
@@ -50,7 +50,7 @@ export function Hero() {
         <div className="relative">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
             <SmartImage
-              src="hero.jpg"
+              src="hero.png"
               alt="Editorial close-up of immaculate medium locs styled in a sculptural updo — Lyfe N' Locs, Arlington TX"
               fill
               priority

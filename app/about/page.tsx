@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { Confirm } from "@/components/ui/Confirm";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
-import { contact } from "@/data/facts";
+import { contact, business } from "@/data/facts";
 
 export const metadata: Metadata = pageMetadata({
   title: "About the Artist — Solo Loc Specialist in Arlington, TX",
   description:
-    "Meet the solo loc artist behind Lyfe N' Locs Beauty Lounge in Arlington, TX. Healthy locs first, beautiful always — coils to color, retwists to sisterlocs.",
+    "Meet Muriel, the solo loc artist behind Lyfe N' Locs Beauty Lounge in Arlington, TX. Healthy locs first, beautiful always — coils to color, retwists to sisterlocs.",
   path: "/about",
 });
 
@@ -39,7 +38,7 @@ export default function AboutPage() {
           <div>
             <Eyebrow>Meet the Artist</Eyebrow>
             <h1 className="mt-4 text-display-l">
-              Hi, I&apos;m <Confirm>name</Confirm>.
+              Hi, I&apos;m {business.ownerName}.
             </h1>
             <p className="mt-6 text-body-l text-[var(--color-muted)]">
               Lyfe N&apos; Locs started with a simple belief — locs should be healthy first and

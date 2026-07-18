@@ -20,9 +20,9 @@ export const faqs: Faq[] = [
     id: "consultations",
     question: "Do I need a consultation?",
     answer: [
-      { text: "New or complex? Book a $25 loc consultation first so we plan the right service. The consult fee is " },
-      { text: "applied to your service / non-refundable", confirm: true },
-      { text: "." },
+      {
+        text: "New or complex? Book a $25 loc consultation first so we plan the right service.",
+      },
     ],
     teaser: true,
   },
@@ -38,9 +38,9 @@ export const faqs: Faq[] = [
     id: "deposits",
     question: "Do I need a deposit?",
     answer: [
-      { text: "" },
-      { text: "Deposit policy — strongly recommended, pending owner confirmation", confirm: true },
-      { text: " A deposit is required to hold your appointment and applies to your total." },
+      {
+        text: "A deposit holds your appointment and applies to your total. You'll see the amount when you book.",
+      },
     ],
     teaser: true,
   },

@@ -4,7 +4,7 @@ Everything here is a **placeholder** rendered as a visible `【CONFIRM】` token
 the owner confirms. Nothing fabricated ships. Update this list as items are resolved.
 
 ## Where the 【CONFIRM】 tokens render in the marketing site (PROMPT A — built)
-- **Owner's name** — Home "Meet the artist" section + `/about` headline & intro.
+- ~~**Owner's name**~~ — **Confirmed: Muriel** (Home + `/about`).
 - **"Years locking"** stat — Home stat bar caption (only real, verifiable stats animate).
 - **Real reviews** — Home "Reviews" section (rating shown honestly; no fabricated count).
 - **Deposit rule** — `/policies` (Deposits) + Home FAQ teaser.
@@ -19,7 +19,7 @@ via the pricing-varies banner). `FAQPage` and `aggregateRating` JSON-LD are inte
 emitted until answers/reviews are confirmed.
 
 ## Brand & identity
-- [ ] Owner's real first/display name (email initials suggest "M. Warns" — UNCONFIRMED)
+- [x] Owner's real first/display name — **Muriel**
 - [ ] Preferred brand voice / personality words
 - [ ] Domain (e.g. lyfenlocs.com) + who owns/registers it
 - [ ] Logo source files (hi-res) — folder: `C:\Users\azaia\Downloads\Real Advancement\Clients\Lyfe N' Locs\Logos`

@@ -7,6 +7,7 @@
 ## Identity
 - **Legal name:** Lyfe N' Locs Beauty Lounge LLC
 - **Brand / display:** Lyfe N' Locs  (logo wordmark reads "Lyfe 'n' Locs")
+- **Owner / artist:** Muriel
 - **Tagline (hers):** "Loc and braid salon"
 - **What she is:** solo master loc artist — loc specialist (starter locs, retwist, interlock,
   micro/sisterlocs, faux locs, extensions, color) plus braids, crochet, silk press, men's.
@@ -44,7 +45,6 @@ Note: Friday is a **split** schedule. The evening 5–8 block = after-hours (ret
   on black. Vectorize to a single-color gold line-icon for favicon/loaders/section markers.
 
 ## 【CONFIRM with owner】 — leave as visible tokens until answered
-- Owner's real first/display name (email initials suggest "M. Warns" — UNCONFIRMED)
 - Preferred brand voice/personality words
 - Deposit & cancellation policy (none published — see recommendations)
 - Consultation fee: applied to service or non-refundable?
@@ -53,3 +53,4 @@ Note: Friday is a **split** schedule. The evening 5–8 block = after-hours (ret
 - Permission + text of any real reviews to feature
 - Products sold? Interest in course/blog upsell?
 - Domain (lyfenlocs.com?) + analytics/SMS provider
+- Years locking (for the home stat bar caption)

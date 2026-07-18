@@ -46,7 +46,7 @@ export function hairSalonJsonLd() {
     telephone: "+1-682-203-3728",
     email: contact.email,
     priceRange: business.priceRange,
-    image: `${SITE_URL}/images/hero.jpg`,
+    image: `${SITE_URL}/images/hero.png`,
     logo: `${SITE_URL}/logo/mark.svg`,
     address: {
       "@type": "PostalAddress",

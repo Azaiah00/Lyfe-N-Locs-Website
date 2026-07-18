@@ -2,12 +2,11 @@ import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SmartImage } from "@/components/ui/SmartImage";
-import { Confirm } from "@/components/ui/Confirm";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { business } from "@/data/facts";
 
 /**
- * MeetArtist — short intro (docs/CONTENT.md). Owner name stays a visible
- * 【CONFIRM】 token (FACTS.md / CONFIRM.md — never invent a name).
+ * MeetArtist — short intro (docs/CONTENT.md). Artist name from facts.ts.
  */
 export function MeetArtist() {
   return (
@@ -17,7 +16,7 @@ export function MeetArtist() {
           <div className="relative mx-auto aspect-[4/5] w-full max-w-sm md:mx-0">
             <SmartImage
               src="artist.jpg"
-              alt="Portrait of the loc artist behind Lyfe N' Locs (placeholder — replace with real headshot)"
+              alt={`${business.ownerName}, the loc artist behind Lyfe N' Locs`}
               fill
               sizes="(max-width: 768px) 90vw, 400px"
               className="shadow-[var(--shadow-card)]"
@@ -31,7 +30,7 @@ export function MeetArtist() {
             The hands behind the locs.
           </h2>
           <p className="mt-6 text-body-l text-[var(--color-muted)]">
-            I&apos;m <Confirm>name</Confirm> — the hands behind Lyfe N&apos; Locs. I specialize
+            I&apos;m {business.ownerName} — the hands behind Lyfe N&apos; Locs. I specialize
             in healthy locs from the very first coil to the styles that turn heads. Your hair
             leaves my chair looking intentional, glossy, and cared for.
           </p>

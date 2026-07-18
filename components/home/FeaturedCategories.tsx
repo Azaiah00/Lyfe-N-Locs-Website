@@ -35,7 +35,7 @@ export function FeaturedCategories() {
               className="group relative block aspect-[4/3] overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-smoke)] hairline-top"
             >
               <SmartImage
-                src={cat.image ?? "hero.jpg"}
+                src={cat.image ?? "hero.png"}
                 alt={`${cat.label} — Lyfe N' Locs, Arlington TX`}
                 fill
                 rounded={false}

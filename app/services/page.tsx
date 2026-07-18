@@ -54,7 +54,10 @@ export default function ServicesPage() {
       {/* Menu grid + sticky nav */}
       <div className="container-glam pb-24">
         <div className="grid gap-10 lg:grid-cols-[220px_1fr] lg:gap-14">
-          <div className="lg:pt-2">
+          {/* min-w-0 lets this grid track shrink below the horizontal rail's
+              content width on mobile/tablet, so the rail scrolls instead of
+              pushing the whole page wider than the viewport. */}
+          <div className="min-w-0 lg:pt-2">
             <CategoryNav />
           </div>
 

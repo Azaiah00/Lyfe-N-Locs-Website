@@ -47,7 +47,7 @@ export const categories: Category[] = [
     label: "Consultations & First Visit",
     short: "Consultations",
     blurb: "New, unsure, or coming back? Start here so we plan the right service.",
-    image: "cat-starter.jpg",
+    image: "cat-starter.png",
   },
   {
     id: "starter",
@@ -56,7 +56,7 @@ export const categories: Category[] = [
     short: "Starter Locs",
     blurb: "Coils, two-strand, small, extra-small, and microloc starts — done to grow healthy.",
     featured: true,
-    image: "cat-starter.jpg",
+    image: "cat-starter.png",
   },
   {
     id: "retwist",
@@ -65,7 +65,7 @@ export const categories: Category[] = [
     short: "Retwist",
     blurb: "Crisp, clean maintenance for existing clients — every size and count.",
     featured: true,
-    image: "cat-retwist.jpg",
+    image: "cat-retwist.png",
   },
   {
     id: "interlock",
@@ -74,7 +74,7 @@ export const categories: Category[] = [
     short: "Micro / Sisterlocs",
     blurb: "Precise interlocking, micro, and sisterloc work with a delicate, premium touch.",
     featured: true,
-    image: "cat-micro.jpg",
+    image: "cat-micro.png",
   },
   {
     id: "styling",
@@ -83,7 +83,7 @@ export const categories: Category[] = [
     short: "Loc Styling",
     blurb: "Updos, curls, loc bobs, and twist-outs that turn heads.",
     featured: true,
-    image: "hero.jpg",
+    image: "hero.png",
   },
   {
     id: "faux-braids",
@@ -92,7 +92,7 @@ export const categories: Category[] = [
     short: "Faux Locs & Braids",
     blurb: "Knotless, box braids, boho, and faux locs — over your own hair or your locs.",
     featured: true,
-    image: "cat-faux.jpg",
+    image: "cat-faux.png",
   },
   {
     id: "crochet",
@@ -100,7 +100,7 @@ export const categories: Category[] = [
     label: "Crochet & Takedowns",
     short: "Crochet & Takedowns",
     blurb: "Crochet installs, styles, and gentle takedown-and-wash service.",
-    image: "cat-faux.jpg",
+    image: "cat-faux.png",
   },
   {
     id: "mens",
@@ -108,7 +108,8 @@ export const categories: Category[] = [
     label: "Men's Grooming",
     short: "Men's",
     blurb: "Two-strand, designer braids, and clean full-head styles for men.",
-    image: "cat-mens.jpg",
+    // No men's work photos yet — SmartImage shows branded fallback until added
+    image: "cat-mens.png",
   },
   {
     id: "color",
@@ -117,7 +118,7 @@ export const categories: Category[] = [
     short: "Color",
     blurb: "Single, multi, and tip color built to keep locs healthy and glossy.",
     featured: true,
-    image: "cat-color.jpg",
+    image: "cat-color.png",
   },
   {
     id: "extensions",
@@ -125,7 +126,7 @@ export const categories: Category[] = [
     label: "Extensions, Recovery & Wash/Press",
     short: "Extensions & Wash",
     blurb: "Loc extensions, detox, deep shampoo, silk press, and recovery services.",
-    image: "cat-retwist.jpg",
+    image: "cat-retwist.png",
   },
 ];
 

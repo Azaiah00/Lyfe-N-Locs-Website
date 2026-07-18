@@ -8,6 +8,8 @@ export const business = {
   legalName: "Lyfe N' Locs Beauty Lounge LLC",
   brand: "Lyfe N' Locs",
   wordmark: "Lyfe 'n' Locs",
+  /** Owner / artist display name — confirmed by stakeholder */
+  ownerName: "Muriel",
   tagline: "Loc & braid salon",
   descriptor: "Solo master loc artist — locs, braids, color & more in Arlington, TX.",
   priceRange: "$$",

@@ -26,9 +26,9 @@ const policies = [
     id: "consultations",
     title: "Consultations",
     parts: [
-      { text: "New or complex? Book a $25 loc consultation first so we plan the right service. The consult fee is " },
-      { text: "applied to your service / non-refundable", confirm: true },
-      { text: "." },
+      {
+        text: "New or complex? Book a $25 loc consultation first so we plan the right service.",
+      },
     ],
   },
   {
@@ -42,9 +42,9 @@ const policies = [
     id: "deposits",
     title: "Deposits",
     parts: [
-      { text: "" },
-      { text: "strongly recommended — a deposit is required to hold your appointment and applies to your total", confirm: true },
-      { text: "" },
+      {
+        text: "A deposit holds your appointment and applies to your total. You'll see the amount when you book.",
+      },
     ],
   },
   {

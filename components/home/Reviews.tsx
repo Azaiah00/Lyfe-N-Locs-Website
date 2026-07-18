@@ -1,12 +1,10 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Confirm } from "@/components/ui/Confirm";
 import { business, online } from "@/data/facts";
 
 /**
- * Reviews — honest rating stat + a visible 【CONFIRM】 for real, permissioned
- * reviews (docs/CONTENT.md / CONFIRM.md — NEVER fabricate reviews or a count).
- * Links out to Facebook to read real reviews.
+ * Reviews — honest rating stat. Never fabricate featured reviews; link out to
+ * Facebook for real client feedback until permissioned quotes are added.
  */
 export function Reviews() {
   return (
@@ -24,9 +22,7 @@ export function Reviews() {
         </div>
 
         <p className="mt-8 text-body-l text-[var(--color-muted)]">
-          Featured reviews will appear here —{" "}
-          <Confirm>2–3 real, permissioned reviews — do not fabricate</Confirm>. Until then,
-          read what clients are saying on Facebook.
+          Read what clients are saying on Facebook — real reviews from real chairs.
         </p>
 
         <a
