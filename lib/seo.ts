@@ -4,9 +4,21 @@ import { business, contact } from "@/data/facts";
 /**
  * Site-wide SEO helpers (docs/SEO.md). Unique title + description per route,
  * gold/black OG card, canonical URLs.
+ *
+ * IMPORTANT: Use one stable origin everywhere (canonical, OG, sitemap, JSON-LD).
+ * Never use Netlify DEPLOY_URL — it changes on every deploy and breaks text-message
+ * link previews. Prefer NEXT_PUBLIC_SITE_URL, then Netlify's primary URL env.
  */
+function resolveSiteUrl(): string {
+  const raw =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.URL || // Netlify primary site address (stable)
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined);
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://lyfenlocs.com";
+  return (raw ?? "https://lyfenlocs.netlify.app").replace(/\/$/, "");
+}
+
+export const SITE_URL = resolveSiteUrl();
 export const SITE_NAME = business.legalName;
 
 const DEFAULT_OG = {

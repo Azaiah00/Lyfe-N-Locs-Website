@@ -1,0 +1,20 @@
+# Netlify — Lyfe N' Locs (Next.js App Router)
+# https://docs.netlify.com/frameworks/next-js/overview/
+
+[build]
+  command = "npm run build"
+
+# Pin the public site URL so canonical tags, OG previews, sitemap, and JSON-LD
+# always match the link you text clients — not a placeholder domain or per-deploy URL.
+[build.environment]
+  NEXT_PUBLIC_SITE_URL = "https://lyfenlocs.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Force HTTPS on the primary Netlify subdomain (stable share link).
+[[redirects]]
+  from = "http://lyfenlocs.netlify.app/*"
+  to = "https://lyfenlocs.netlify.app/:splat"
+  status = 301
+  force = true

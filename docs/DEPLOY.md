@@ -7,7 +7,7 @@ Vercel or Netlify. Pick one.
 
 | Variable | Required? | Purpose |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Recommended | Production origin (e.g. `https://lyfenlocs.com`). Used for canonical URLs, `sitemap.xml`, `robots.txt`, and JSON-LD. Defaults to `https://lyfenlocs.com` if unset. |
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Production origin (e.g. `https://lyfenlocs.netlify.app` or your custom domain). Used for canonical URLs, `sitemap.xml`, `robots.txt`, JSON-LD, and **SMS/iMessage link previews**. Set in `netlify.toml` for Netlify. Never use a per-deploy preview URL. |
 
 The booking portal at `/book` runs in **demo mode** on mock data when no keys are set, so it
 deploys and demos immediately. To take deposits live, add `SQUARE_ACCESS_TOKEN` +
@@ -29,10 +29,21 @@ is git-ignored).
 
 1. Push to GitHub.
 2. Netlify → **Add new site → Import an existing project** → pick the repo.
-3. Netlify auto-detects Next.js via the official Next runtime. Build command `next build`,
-   publish directory handled by the runtime (leave default).
-4. Add env var `NEXT_PUBLIC_SITE_URL`.
-5. **Deploy** and attach the domain under **Domain management**.
+3. Build settings are defined in [`netlify.toml`](../netlify.toml) at the repo root
+   (Next.js plugin + pinned `NEXT_PUBLIC_SITE_URL`). **Do not** set Publish directory
+   to `.next` in the Netlify UI — let the Next.js plugin handle output.
+4. Under **Domain management**, set **Primary domain** to `lyfenlocs.netlify.app`
+   (or your custom domain when ready).
+5. **Deploy.**
+
+### Stable link to text clients
+
+Always share exactly:
+
+**https://lyfenlocs.netlify.app**
+
+Do **not** copy URLs from deploy logs, deploy previews (`deploy-preview-…--lyfenlocs.netlify.app`),
+or branch deploys (`branch-name--lyfenlocs.netlify.app`) — those change and confuse clients.
 
 ---
 
